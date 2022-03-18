@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Minecraft Book Command Utility</title>
+</head>
+
+<body>
+    <h1>Minecraft Book Command Utility</h1>
+    <p>Enter your book info below and click da button.</p>
+
+    <form action="main.php" method="POST" style="margin: 1rem;">
+        <div class="form-group">
+            <label for="text">Text:</label>
+            <textarea 
+                id="text" 
+                name="book_text" 
+                class="form-control"></textarea>
+        </div>
+
+        <div class="form-group">
+            <label for="title">Title:</label>
+            <input type="text" id="title" name="book_title">
+        </div>
+
+        <div class="form-group">
+            <label for="author">Author:</label>
+            <input type="text" id="author" name="book_author">
+        </div>
+        <div class="form-group">
+            <label for="type">Type:</label>
+
+            <select id="type" name="book_generation">
+                <option value="0" selected="selected">Original</option>
+                <option value="1">Copy of original</option>
+                <option value="2">Copy of copy</option>
+                <option value="3">Tattered</option>
+            </select>
+        </div>
+
+        <input type="submit" name="submit" value="Generate Code">
+        <!--
+                'page' => [],
+                'title' => '',
+                'author' => '',
+                'generation' => 1,
+                'display' => 0,
+            -->
+    </form>
+</body>
+
+</html>

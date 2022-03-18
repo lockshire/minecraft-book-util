@@ -1,0 +1,19 @@
+body {
+    font-family: Minecraftia,'Courier New', Courier, monospace;
+    margin: 1rem;
+    background: url('parchment-large.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+#book_text {
+    width: 17em;
+    font-family: Minecraftia,'Courier New', Courier, monospace;
+    background-color: antiquewhite;
+    border: 2px solid bisque;
+    margin-bottom: 0.5em;
+}
+
+.form-group {
+    width: 21em;
+}

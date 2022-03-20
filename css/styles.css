@@ -1,0 +1,26 @@
+body {
+    font-family: 'Minecraft Regular','Minecraftia','Courier New', Courier, monospace;
+    margin: 1rem;
+    background: url('../img/parchment-large.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+#book_text {
+    padding-top: 4rem;
+    padding-left: 4rem;
+    padding-right: 4rem;
+    font-size: 24pt;
+    width: 38rem;
+    overflow-y: scroll;
+    font-family: 'Minecraft Regular','Minecraftia','Courier New', Courier, monospace;
+    /* background-color: antiquewhite; */
+    /* border: 2px solid bisque; */
+    background: url('../img/blank-book.png');
+    background-repeat: no-repeat;
+    margin-bottom: 0.5em;
+}
+
+.form-group {
+    width: 21em;
+}

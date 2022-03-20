@@ -4,7 +4,7 @@
 <head>
     <title>Minecraft Book Command Utility</title>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="css/styles.css">
 </head>
 
 <body>
@@ -24,16 +24,16 @@
 
         <div class="form-group">
             <label for="title">Title</label>
-            <input type="text" id="title" name="book_title" class="form-control">
+            <input type="text" id="title" name="book_title" class="form-control" placeholder="Your Book Title">
         </div>
 
         <div class="form-group">
             <label for="author">Author:</label>
-            <input type="text" id="author" name="book_author" class="form-control">
+            <input type="text" id="author" name="book_author" class="form-control" placeholder="Author's Name">
         </div>
+
         <div class="form-group">
             <label for="type">Type:</label>
-
             <select id="type" name="book_generation" class="form-control">
                 <option value="0" selected="selected">Original</option>
                 <option value="1">Copy of original</option>
@@ -43,13 +43,6 @@
         </div>
 
         <input type="submit" name="submit" value="Generate Code">
-        <!--
-                'page' => [],
-                'title' => '',
-                'author' => '',
-                'generation' => 1,
-                'display' => 0,
-            -->
     </form>
 </body>
 

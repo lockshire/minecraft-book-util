@@ -72,9 +72,15 @@ class Book
         return $this->display;
     }
 
-    public function addPage(string $page): Book
+    public function addPage(): Book
     {
-        $this->page[] = $page;
+        $this->page[] = '';
+        return $this;
+    }
+
+    public function updatePage(int $pageNo, string $page): Book
+    {
+        $this->page[$pageNo] = $page;
         return $this;
     }
 

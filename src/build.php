@@ -7,5 +7,5 @@ require_once('BookCommandBuilder.php');
 $mode = php_sapi_name();
 
 $builder = new BookBuilder($mode);
-$builder->exec();
+$builder->build();
 $builder->output($builder->getCommand());

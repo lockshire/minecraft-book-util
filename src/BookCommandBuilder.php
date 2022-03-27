@@ -1,6 +1,6 @@
 <?php namespace Lockshire\Minecraft\Tools;
 
-class CommandBuilder
+class BookCommandBuilder
 {
     private Book $book;
     
@@ -9,7 +9,7 @@ class CommandBuilder
         $this->book = $book;
     }
 
-    public function exec()
+    public function build()
     {
         $pages = [];
 

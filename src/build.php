@@ -2,7 +2,7 @@
 
 require_once('Book.php');
 require_once('BookBuilder.php');
-require_once('CommandBuilder.php');
+require_once('BookCommandBuilder.php');
 
 $mode = php_sapi_name();
 

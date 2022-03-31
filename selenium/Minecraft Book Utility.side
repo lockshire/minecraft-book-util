@@ -2,7 +2,7 @@
   "id": "1020c7a3-cc6d-4a47-870f-944287ef1ec6",
   "version": "2.0",
   "name": "Minecraft Book Utility",
-  "url": "http://192.168.1.26",
+  "url": "http://192.168.1.26/minecraft-book-util/",
   "tests": [{
     "id": "42d1d411-2745-41ef-a005-1a2a54d5ccae",
     "name": "First Test",
@@ -166,6 +166,1236 @@
       ],
       "value": "/give @p written_book{pages:['{\"text\":\"Test ///n\"}'],title:\"Book Title\",author:\"A Name\",generation:3}"
     }]
+  }, {
+    "id": "3b87aab5-1fff-46fa-9e3d-886adf9e4744",
+    "name": "Form accepts title, author, generation",
+    "commands": []
+  }, {
+    "id": "43f19b2a-b811-4789-a255-823331b3e624",
+    "name": "Empty book produces one blank page",
+    "commands": [{
+      "id": "7a8914d9-480d-4abe-a7f2-123928ba6e47",
+      "comment": "",
+      "command": "open",
+      "target": "http://192.168.1.26/minecraft-book-util/",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "e419d02d-a312-48af-ac2c-55dfa90f7665",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "1440x797",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "44879bcf-e164-4be6-9ec4-08dd52c4b640",
+      "comment": "",
+      "command": "click",
+      "target": "id=test_mode",
+      "targets": [
+        ["id=test_mode", "id"],
+        ["name=test_mode", "name"],
+        ["css=#test_mode", "css:finder"],
+        ["xpath=//input[@id='test_mode']", "xpath:attributes"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "1278c43c-69cf-4e08-a4a6-82795723abb0",
+      "comment": "",
+      "command": "click",
+      "target": "id=title",
+      "targets": [
+        ["id=title", "id"],
+        ["name=book_title", "name"],
+        ["css=#title", "css:finder"],
+        ["xpath=//input[@id='title']", "xpath:attributes"],
+        ["xpath=//div[2]/div/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "7abd8098-b3c7-4613-bf80-95e03d1da910",
+      "comment": "",
+      "command": "type",
+      "target": "id=title",
+      "targets": [
+        ["id=title", "id"],
+        ["name=book_title", "name"],
+        ["css=#title", "css:finder"],
+        ["xpath=//input[@id='title']", "xpath:attributes"],
+        ["xpath=//div[2]/div/input", "xpath:position"]
+      ],
+      "value": "Book Title"
+    }, {
+      "id": "a7f64980-4dbf-4b17-a665-57038eb06177",
+      "comment": "",
+      "command": "click",
+      "target": "id=author",
+      "targets": [
+        ["id=author", "id"],
+        ["name=book_author", "name"],
+        ["css=#author", "css:finder"],
+        ["xpath=//input[@id='author']", "xpath:attributes"],
+        ["xpath=//div[2]/div[2]/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "8b624e46-4aea-4af8-8022-1ee182c14af7",
+      "comment": "",
+      "command": "type",
+      "target": "id=author",
+      "targets": [
+        ["id=author", "id"],
+        ["name=book_author", "name"],
+        ["css=#author", "css:finder"],
+        ["xpath=//input[@id='author']", "xpath:attributes"],
+        ["xpath=//div[2]/div[2]/input", "xpath:position"]
+      ],
+      "value": "A Name"
+    }, {
+      "id": "0ae158be-d66a-4b55-a8a7-51562e84e0b9",
+      "comment": "",
+      "command": "click",
+      "target": "id=type",
+      "targets": [
+        ["id=type", "id"],
+        ["name=book_generation", "name"],
+        ["css=#type", "css:finder"],
+        ["xpath=//select[@id='type']", "xpath:attributes"],
+        ["xpath=//select", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "a2461e8c-0b2e-45ca-91bd-ff6f4cdd3720",
+      "comment": "",
+      "command": "select",
+      "target": "id=type",
+      "targets": [],
+      "value": "label=Copy of original"
+    }, {
+      "id": "9d03401c-75f5-4f81-9b4c-61f10b283c11",
+      "comment": "",
+      "command": "click",
+      "target": "name=submit",
+      "targets": [
+        ["name=submit", "name"],
+        ["css=input:nth-child(4)", "css:finder"],
+        ["xpath=//input[@name='submit']", "xpath:attributes"],
+        ["xpath=//form/div/div[2]/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "22c5fd2c-d82c-4a94-b052-e0b39b026479",
+      "comment": "",
+      "command": "assertText",
+      "target": "id=minecraft-command",
+      "targets": [
+        ["id=minecraft-command", "id"],
+        ["css=#minecraft-command", "css:finder"],
+        ["xpath=//code[@id='minecraft-command']", "xpath:attributes"],
+        ["xpath=//code", "xpath:position"]
+      ],
+      "value": "/give @p written_book{pages:['{\"text\":\" ///n\"}'],title:\"Book Title\",author:\"A Name\",generation:1}"
+    }]
+  }, {
+    "id": "a1e5cfb0-007e-4a47-8f75-5df965ed2cb9",
+    "name": "Accepts blank form with defaults",
+    "commands": [{
+      "id": "a32bcbf7-309e-4469-9663-276971e020dd",
+      "comment": "",
+      "command": "open",
+      "target": "http://192.168.1.26/minecraft-book-util/",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "90dfd77c-c482-41c5-a6d5-a771db4493eb",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "1440x797",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "98bddc0a-9244-4fd3-ba7c-fb3243012a11",
+      "comment": "",
+      "command": "click",
+      "target": "id=test_mode",
+      "targets": [
+        ["id=test_mode", "id"],
+        ["name=test_mode", "name"],
+        ["css=#test_mode", "css:finder"],
+        ["xpath=//input[@id='test_mode']", "xpath:attributes"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "d2c53515-b710-4dae-ab90-a3f0132a7374",
+      "comment": "",
+      "command": "click",
+      "target": "name=submit",
+      "targets": [
+        ["name=submit", "name"],
+        ["css=input:nth-child(4)", "css:finder"],
+        ["xpath=//input[@name='submit']", "xpath:attributes"],
+        ["xpath=//form/div/div[2]/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "fba3894e-4e57-4956-a804-bc9eb1df6c43",
+      "comment": "",
+      "command": "assertText",
+      "target": "id=minecraft-command",
+      "targets": [
+        ["id=minecraft-command", "id"],
+        ["css=#minecraft-command", "css:finder"],
+        ["xpath=//code[@id='minecraft-command']", "xpath:attributes"],
+        ["xpath=//code", "xpath:position"]
+      ],
+      "value": "/give @p written_book{pages:['{\"text\":\" ///n\"}'],title:\"\",author:\"\",generation:0}"
+    }]
+  }, {
+    "id": "43afb0e0-8bd9-4867-b1ac-70dbc99d76d4",
+    "name": "Single line book produces one page",
+    "commands": [{
+      "id": "9a53a629-0e8e-46aa-b3c5-4ba2a052fe77",
+      "comment": "",
+      "command": "open",
+      "target": "http://192.168.1.26/minecraft-book-util/",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "ff091881-249a-49ab-acfe-8c8f48f4f518",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "1440x797",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "448abe4b-cfbb-4189-a343-554b34226b2e",
+      "comment": "",
+      "command": "click",
+      "target": "id=book_text",
+      "targets": [
+        ["id=book_text", "id"],
+        ["name=book_text", "name"],
+        ["css=#book_text", "css:finder"],
+        ["xpath=//textarea[@id='book_text']", "xpath:attributes"],
+        ["xpath=//textarea", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "fba3e7c1-82da-49df-a53c-ba3de529598a",
+      "comment": "",
+      "command": "type",
+      "target": "id=book_text",
+      "targets": [
+        ["id=book_text", "id"],
+        ["name=book_text", "name"],
+        ["css=#book_text", "css:finder"],
+        ["xpath=//textarea[@id='book_text']", "xpath:attributes"],
+        ["xpath=//textarea", "xpath:position"]
+      ],
+      "value": "This is a single line."
+    }, {
+      "id": "069b8e19-d72e-4381-af4b-914ee7034191",
+      "comment": "",
+      "command": "click",
+      "target": "id=test_mode",
+      "targets": [
+        ["id=test_mode", "id"],
+        ["name=test_mode", "name"],
+        ["css=#test_mode", "css:finder"],
+        ["xpath=//input[@id='test_mode']", "xpath:attributes"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "662f9306-2c13-41d5-bbb6-556fe8204df9",
+      "comment": "",
+      "command": "click",
+      "target": "id=title",
+      "targets": [
+        ["id=title", "id"],
+        ["name=book_title", "name"],
+        ["css=#title", "css:finder"],
+        ["xpath=//input[@id='title']", "xpath:attributes"],
+        ["xpath=//div[2]/div/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "2d9cab1f-c56c-4708-a5a3-8b33a01f395a",
+      "comment": "",
+      "command": "type",
+      "target": "id=title",
+      "targets": [
+        ["id=title", "id"],
+        ["name=book_title", "name"],
+        ["css=#title", "css:finder"],
+        ["xpath=//input[@id='title']", "xpath:attributes"],
+        ["xpath=//div[2]/div/input", "xpath:position"]
+      ],
+      "value": "Book Title"
+    }, {
+      "id": "af32e316-a4e4-4a97-9c67-77448a861edf",
+      "comment": "",
+      "command": "click",
+      "target": "id=author",
+      "targets": [
+        ["id=author", "id"],
+        ["name=book_author", "name"],
+        ["css=#author", "css:finder"],
+        ["xpath=//input[@id='author']", "xpath:attributes"],
+        ["xpath=//div[2]/div[2]/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "bc66b4b4-b9f8-4bdf-a754-c48da69c07ae",
+      "comment": "",
+      "command": "type",
+      "target": "id=author",
+      "targets": [
+        ["id=author", "id"],
+        ["name=book_author", "name"],
+        ["css=#author", "css:finder"],
+        ["xpath=//input[@id='author']", "xpath:attributes"],
+        ["xpath=//div[2]/div[2]/input", "xpath:position"]
+      ],
+      "value": "A Name"
+    }, {
+      "id": "4c8a0ac8-9b01-485a-82fc-adf3050f301e",
+      "comment": "",
+      "command": "click",
+      "target": "id=type",
+      "targets": [
+        ["id=type", "id"],
+        ["name=book_generation", "name"],
+        ["css=#type", "css:finder"],
+        ["xpath=//select[@id='type']", "xpath:attributes"],
+        ["xpath=//select", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "3ecd663f-bc1c-4f16-9d33-61aca75f8e71",
+      "comment": "",
+      "command": "select",
+      "target": "id=type",
+      "targets": [],
+      "value": "label=Tattered"
+    }, {
+      "id": "3a2b4537-bd04-437a-9a37-d6acf1a71a19",
+      "comment": "",
+      "command": "click",
+      "target": "name=submit",
+      "targets": [
+        ["name=submit", "name"],
+        ["css=input:nth-child(4)", "css:finder"],
+        ["xpath=//input[@name='submit']", "xpath:attributes"],
+        ["xpath=//form/div/div[2]/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "eb88de05-cf51-440f-a7d2-68271a702fef",
+      "comment": "",
+      "command": "assertText",
+      "target": "id=minecraft-command",
+      "targets": [
+        ["id=minecraft-command", "id"],
+        ["css=#minecraft-command", "css:finder"],
+        ["xpath=//code[@id='minecraft-command']", "xpath:attributes"],
+        ["xpath=//code", "xpath:position"]
+      ],
+      "value": "/give @p written_book{pages:['{\"text\":\"This is a single line. ///n\"}'],title:\"Book Title\",author:\"A Name\",generation:3}"
+    }]
+  }, {
+    "id": "70d4c7a2-1177-4e33-b77d-4d2c4d9c3a0d",
+    "name": "Up to 14 lines produces one page",
+    "commands": [{
+      "id": "ced99576-14f2-4ed0-8b87-dfa30166f036",
+      "comment": "",
+      "command": "open",
+      "target": "http://192.168.1.26/minecraft-book-util/",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "610eeca7-d5e0-46f4-b0f0-101ec6b98b83",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "1440x797",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "bf619bd6-c63b-48ba-b46e-4ef2b1ea51f4",
+      "comment": "",
+      "command": "click",
+      "target": "id=book_text",
+      "targets": [
+        ["id=book_text", "id"],
+        ["name=book_text", "name"],
+        ["css=#book_text", "css:finder"],
+        ["xpath=//textarea[@id='book_text']", "xpath:attributes"],
+        ["xpath=//textarea", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "e39a8979-081f-4190-9df1-1808f1c93135",
+      "comment": "",
+      "command": "type",
+      "target": "id=book_text",
+      "targets": [
+        ["id=book_text", "id"],
+        ["name=book_text", "name"],
+        ["css=#book_text", "css:finder"],
+        ["xpath=//textarea[@id='book_text']", "xpath:attributes"],
+        ["xpath=//textarea", "xpath:position"]
+      ],
+      "value": "Time to test out up to 14 lines of text. This should only produce one page of text. It's also hard to know if 14 lines here will be 14 lines in command code. Technically I should do another test for exactly 14 lines and another for between one and 14 lines. One more sentence to go!"
+    }, {
+      "id": "48a7b688-e940-47a4-86bc-8be3c93328a7",
+      "comment": "",
+      "command": "click",
+      "target": "id=test_mode",
+      "targets": [
+        ["id=test_mode", "id"],
+        ["name=test_mode", "name"],
+        ["css=#test_mode", "css:finder"],
+        ["xpath=//input[@id='test_mode']", "xpath:attributes"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "f40e9db3-e80c-43c3-9779-776cf4685a52",
+      "comment": "",
+      "command": "click",
+      "target": "id=title",
+      "targets": [
+        ["id=title", "id"],
+        ["name=book_title", "name"],
+        ["css=#title", "css:finder"],
+        ["xpath=//input[@id='title']", "xpath:attributes"],
+        ["xpath=//div[2]/div/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "cc036290-40a5-4ee6-9c40-890b0fea3b6c",
+      "comment": "",
+      "command": "type",
+      "target": "id=title",
+      "targets": [
+        ["id=title", "id"],
+        ["name=book_title", "name"],
+        ["css=#title", "css:finder"],
+        ["xpath=//input[@id='title']", "xpath:attributes"],
+        ["xpath=//div[2]/div/input", "xpath:position"]
+      ],
+      "value": "One Page"
+    }, {
+      "id": "ad4f8643-4823-4530-a350-8806a6862bf5",
+      "comment": "",
+      "command": "click",
+      "target": "id=author",
+      "targets": [
+        ["id=author", "id"],
+        ["name=book_author", "name"],
+        ["css=#author", "css:finder"],
+        ["xpath=//input[@id='author']", "xpath:attributes"],
+        ["xpath=//div[2]/div[2]/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "c4c4a100-d548-41dd-b5dc-39700c3f021a",
+      "comment": "",
+      "command": "type",
+      "target": "id=author",
+      "targets": [
+        ["id=author", "id"],
+        ["name=book_author", "name"],
+        ["css=#author", "css:finder"],
+        ["xpath=//input[@id='author']", "xpath:attributes"],
+        ["xpath=//div[2]/div[2]/input", "xpath:position"]
+      ],
+      "value": "A Name"
+    }, {
+      "id": "5584a5b2-91b2-4fde-ab3b-d23de0e91b3e",
+      "comment": "",
+      "command": "click",
+      "target": "id=type",
+      "targets": [
+        ["id=type", "id"],
+        ["name=book_generation", "name"],
+        ["css=#type", "css:finder"],
+        ["xpath=//select[@id='type']", "xpath:attributes"],
+        ["xpath=//select", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "e61e7398-4bc5-4ca9-ba32-30123c126dc1",
+      "comment": "",
+      "command": "select",
+      "target": "id=type",
+      "targets": [],
+      "value": "label=Tattered"
+    }, {
+      "id": "3b289619-501e-4633-aa37-4f1e81e377b5",
+      "comment": "",
+      "command": "click",
+      "target": "name=submit",
+      "targets": [
+        ["name=submit", "name"],
+        ["css=input:nth-child(4)", "css:finder"],
+        ["xpath=//input[@name='submit']", "xpath:attributes"],
+        ["xpath=//form/div/div[2]/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "81430770-1601-437c-a8fb-6bc95f61dd90",
+      "comment": "",
+      "command": "assertText",
+      "target": "id=minecraft-command",
+      "targets": [
+        ["id=minecraft-command", "id"],
+        ["css=#minecraft-command", "css:finder"],
+        ["xpath=//code[@id='minecraft-command']", "xpath:attributes"],
+        ["xpath=//code", "xpath:position"]
+      ],
+      "value": "/give @p written_book{pages:['{\"text\":\"Time to test out up to 14 lines of text. This should only produce one page of text. It\\'s also hard to know if 14 lines here will be 14 lines in command code. Technically I should do another test for exactly 14 lines and another for between one and 14 lines. One more sentence to go! ///n\"}','{\"text\":\"\"}'],title:\"One Page\",author:\"A Name\",generation:3}"
+    }]
+  }, {
+    "id": "68f83e08-f2a3-4a60-966c-b6f4867ead0b",
+    "name": "15 to 28 lines produces two pages",
+    "commands": [{
+      "id": "24d63e1a-6cfd-49e5-9d03-db57ae0e692d",
+      "comment": "",
+      "command": "open",
+      "target": "http://192.168.1.26/minecraft-book-util/",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "8b2c8865-1c30-4de3-aa9d-2bb3ac920a62",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "1440x797",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "8a1387b7-636e-4795-abed-e3bc75ddd4c5",
+      "comment": "",
+      "command": "click",
+      "target": "id=book_text",
+      "targets": [
+        ["id=book_text", "id"],
+        ["name=book_text", "name"],
+        ["css=#book_text", "css:finder"],
+        ["xpath=//textarea[@id='book_text']", "xpath:attributes"],
+        ["xpath=//textarea", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "891447b1-7803-43f3-87ab-1a68d9a49652",
+      "comment": "",
+      "command": "type",
+      "target": "id=book_text",
+      "targets": [
+        ["id=book_text", "id"],
+        ["name=book_text", "name"],
+        ["css=#book_text", "css:finder"],
+        ["xpath=//textarea[@id='book_text']", "xpath:attributes"],
+        ["xpath=//textarea", "xpath:position"]
+      ],
+      "value": "Time to test for two pages. We need to write out text that will fill between 15 and 28 lines. We shall see if 15 lines in this box matches two pages in command code. I don't know what else to write.\\n\\nWe will also test a new paragraph. Should I do two tests in one? Probably not."
+    }, {
+      "id": "96afd77b-ba64-4dde-9e3f-a7481f49f510",
+      "comment": "",
+      "command": "click",
+      "target": "id=test_mode",
+      "targets": [
+        ["id=test_mode", "id"],
+        ["name=test_mode", "name"],
+        ["css=#test_mode", "css:finder"],
+        ["xpath=//input[@id='test_mode']", "xpath:attributes"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "ca77bf15-2cfd-4f94-9ded-c5c4d0efe577",
+      "comment": "",
+      "command": "click",
+      "target": "id=title",
+      "targets": [
+        ["id=title", "id"],
+        ["name=book_title", "name"],
+        ["css=#title", "css:finder"],
+        ["xpath=//input[@id='title']", "xpath:attributes"],
+        ["xpath=//div[2]/div/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "2eea1246-23cc-4901-a56b-5d8a944379bb",
+      "comment": "",
+      "command": "type",
+      "target": "id=title",
+      "targets": [
+        ["id=title", "id"],
+        ["name=book_title", "name"],
+        ["css=#title", "css:finder"],
+        ["xpath=//input[@id='title']", "xpath:attributes"],
+        ["xpath=//div[2]/div/input", "xpath:position"]
+      ],
+      "value": "Two Pages"
+    }, {
+      "id": "62cfc190-a289-42ba-a431-4f9c5e206596",
+      "comment": "",
+      "command": "click",
+      "target": "id=author",
+      "targets": [
+        ["id=author", "id"],
+        ["name=book_author", "name"],
+        ["css=#author", "css:finder"],
+        ["xpath=//input[@id='author']", "xpath:attributes"],
+        ["xpath=//div[2]/div[2]/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "8093b12e-8464-45e5-b931-39f30b610b05",
+      "comment": "",
+      "command": "type",
+      "target": "id=author",
+      "targets": [
+        ["id=author", "id"],
+        ["name=book_author", "name"],
+        ["css=#author", "css:finder"],
+        ["xpath=//input[@id='author']", "xpath:attributes"],
+        ["xpath=//div[2]/div[2]/input", "xpath:position"]
+      ],
+      "value": "A Name"
+    }, {
+      "id": "0fd12f6d-cfee-4aec-9131-2cfcc5f85672",
+      "comment": "",
+      "command": "click",
+      "target": "id=type",
+      "targets": [
+        ["id=type", "id"],
+        ["name=book_generation", "name"],
+        ["css=#type", "css:finder"],
+        ["xpath=//select[@id='type']", "xpath:attributes"],
+        ["xpath=//select", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "ca2c38a8-6c10-44ba-a975-a07b34c4d7e3",
+      "comment": "",
+      "command": "select",
+      "target": "id=type",
+      "targets": [],
+      "value": "label=Copy of copy"
+    }, {
+      "id": "feb3c2d7-07b5-4226-aa57-fc758a9cea3f",
+      "comment": "",
+      "command": "click",
+      "target": "name=submit",
+      "targets": [
+        ["name=submit", "name"],
+        ["css=input:nth-child(4)", "css:finder"],
+        ["xpath=//input[@name='submit']", "xpath:attributes"],
+        ["xpath=//form/div/div[2]/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "9ce52e94-5b62-4369-99d5-514afbafe837",
+      "comment": "",
+      "command": "assertText",
+      "target": "id=minecraft-command",
+      "targets": [
+        ["id=minecraft-command", "id"],
+        ["css=#minecraft-command", "css:finder"],
+        ["xpath=//code[@id='minecraft-command']", "xpath:attributes"],
+        ["xpath=//code", "xpath:position"]
+      ],
+      "value": "/give @p written_book{pages:['{\"text\":\"Time to test for two pages. We need to write out text that will fill between 15 and 28 lines. We shall see if 15 lines in this box matches two pages in command code. I don\\'t know what else to write. ///n ///nWe will also test a new paragraph. Should I do two tests in one? \"}','{\"text\":\"Probably not. ///n\"}'],title:\"Two Pages\",author:\"A Name\",generation:2}"
+    }]
+  }, {
+    "id": "a834f871-98aa-4b8e-808c-b03a0d81b612",
+    "name": "Single quotation produces no errors",
+    "commands": [{
+      "id": "b4803a32-86c4-4f8d-b66d-2b3fc591cd45",
+      "comment": "",
+      "command": "open",
+      "target": "http://192.168.1.26/minecraft-book-util/",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "f72188e2-739a-47df-894a-f106606737cd",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "1440x797",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "323ae0f0-bbbd-4ca4-ab18-8a8ff181eb71",
+      "comment": "",
+      "command": "click",
+      "target": "id=book_text",
+      "targets": [
+        ["id=book_text", "id"],
+        ["name=book_text", "name"],
+        ["css=#book_text", "css:finder"],
+        ["xpath=//textarea[@id='book_text']", "xpath:attributes"],
+        ["xpath=//textarea", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "83ba5299-2613-493e-840a-952f6ce9ca4a",
+      "comment": "",
+      "command": "type",
+      "target": "id=book_text",
+      "targets": [
+        ["id=book_text", "id"],
+        ["name=book_text", "name"],
+        ["css=#book_text", "css:finder"],
+        ["xpath=//textarea[@id='book_text']", "xpath:attributes"],
+        ["xpath=//textarea", "xpath:position"]
+      ],
+      "value": "I'm using conjunctions to test single quotations. Don't know if it'll work. Let's see."
+    }, {
+      "id": "342b482c-ef5e-457a-ba8a-fe9239d08651",
+      "comment": "",
+      "command": "click",
+      "target": "id=test_mode",
+      "targets": [
+        ["id=test_mode", "id"],
+        ["name=test_mode", "name"],
+        ["css=#test_mode", "css:finder"],
+        ["xpath=//input[@id='test_mode']", "xpath:attributes"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "a74bc70a-cd81-43f8-84dc-de639cad49e2",
+      "comment": "",
+      "command": "click",
+      "target": "id=title",
+      "targets": [
+        ["id=title", "id"],
+        ["name=book_title", "name"],
+        ["css=#title", "css:finder"],
+        ["xpath=//input[@id='title']", "xpath:attributes"],
+        ["xpath=//div[2]/div/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "f8dfd755-d724-4f16-9858-4229df091027",
+      "comment": "",
+      "command": "type",
+      "target": "id=title",
+      "targets": [
+        ["id=title", "id"],
+        ["name=book_title", "name"],
+        ["css=#title", "css:finder"],
+        ["xpath=//input[@id='title']", "xpath:attributes"],
+        ["xpath=//div[2]/div/input", "xpath:position"]
+      ],
+      "value": "Book Title"
+    }, {
+      "id": "5fd71fdd-19d2-4855-b8a7-737bd78409b2",
+      "comment": "",
+      "command": "click",
+      "target": "id=author",
+      "targets": [
+        ["id=author", "id"],
+        ["name=book_author", "name"],
+        ["css=#author", "css:finder"],
+        ["xpath=//input[@id='author']", "xpath:attributes"],
+        ["xpath=//div[2]/div[2]/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "389f86a7-be0c-40bf-91de-c1fe623a36cb",
+      "comment": "",
+      "command": "type",
+      "target": "id=author",
+      "targets": [
+        ["id=author", "id"],
+        ["name=book_author", "name"],
+        ["css=#author", "css:finder"],
+        ["xpath=//input[@id='author']", "xpath:attributes"],
+        ["xpath=//div[2]/div[2]/input", "xpath:position"]
+      ],
+      "value": "A Name"
+    }, {
+      "id": "db3ef5e3-2e5c-4dfe-a6b6-36a065b641f4",
+      "comment": "",
+      "command": "click",
+      "target": "id=type",
+      "targets": [
+        ["id=type", "id"],
+        ["name=book_generation", "name"],
+        ["css=#type", "css:finder"],
+        ["xpath=//select[@id='type']", "xpath:attributes"],
+        ["xpath=//select", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "9d50ceea-5c22-4f07-b17a-7eeefb39f533",
+      "comment": "",
+      "command": "click",
+      "target": "name=submit",
+      "targets": [
+        ["name=submit", "name"],
+        ["css=input:nth-child(4)", "css:finder"],
+        ["xpath=//input[@name='submit']", "xpath:attributes"],
+        ["xpath=//form/div/div[2]/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "a0188de3-c29f-4bf7-b8db-cc94fb299378",
+      "comment": "",
+      "command": "assertText",
+      "target": "id=minecraft-command",
+      "targets": [
+        ["id=minecraft-command", "id"],
+        ["css=#minecraft-command", "css:finder"],
+        ["xpath=//code[@id='minecraft-command']", "xpath:attributes"],
+        ["xpath=//code", "xpath:position"]
+      ],
+      "value": "/give @p written_book{pages:['{\"text\":\"I\\'m using conjunctions to test single quotations. Don\\'t know if it\\'ll work. Let\\'s see. ///n\"}'],title:\"Book Title\",author:\"A Name\",generation:0}"
+    }]
+  }, {
+    "id": "58dee133-db25-4b08-b5b1-8fe05cd20091",
+    "name": "Double quotation produces no errors",
+    "commands": [{
+      "id": "d725e0c4-d31c-4c47-a462-8b554d34602f",
+      "comment": "",
+      "command": "open",
+      "target": "http://192.168.1.26/minecraft-book-util/",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "46a4f93b-5add-4b95-ba8e-91206e5de71e",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "1440x797",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "66ca3066-534a-42a5-a933-de5fe41d24a3",
+      "comment": "",
+      "command": "click",
+      "target": "id=book_text",
+      "targets": [
+        ["id=book_text", "id"],
+        ["name=book_text", "name"],
+        ["css=#book_text", "css:finder"],
+        ["xpath=//textarea[@id='book_text']", "xpath:attributes"],
+        ["xpath=//textarea", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "428647dc-f5d3-47d0-b10e-a87355e9f43a",
+      "comment": "",
+      "command": "type",
+      "target": "id=book_text",
+      "targets": [
+        ["id=book_text", "id"],
+        ["name=book_text", "name"],
+        ["css=#book_text", "css:finder"],
+        ["xpath=//textarea[@id='book_text']", "xpath:attributes"],
+        ["xpath=//textarea", "xpath:position"]
+      ],
+      "value": "\"This is a sentence.\" said the Author."
+    }, {
+      "id": "3a1030cf-d346-4b25-b136-d3da32031dfb",
+      "comment": "",
+      "command": "click",
+      "target": "id=test_mode",
+      "targets": [
+        ["id=test_mode", "id"],
+        ["name=test_mode", "name"],
+        ["css=#test_mode", "css:finder"],
+        ["xpath=//input[@id='test_mode']", "xpath:attributes"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "2c29fdff-168f-4b33-b068-1beb70c44438",
+      "comment": "",
+      "command": "click",
+      "target": "id=title",
+      "targets": [
+        ["id=title", "id"],
+        ["name=book_title", "name"],
+        ["css=#title", "css:finder"],
+        ["xpath=//input[@id='title']", "xpath:attributes"],
+        ["xpath=//div[2]/div/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "703f53fc-33f4-461a-a2e3-f3aae1794b40",
+      "comment": "",
+      "command": "type",
+      "target": "id=title",
+      "targets": [
+        ["id=title", "id"],
+        ["name=book_title", "name"],
+        ["css=#title", "css:finder"],
+        ["xpath=//input[@id='title']", "xpath:attributes"],
+        ["xpath=//div[2]/div/input", "xpath:position"]
+      ],
+      "value": "Book Title"
+    }, {
+      "id": "5f2175e8-f029-409e-bb99-5c2c703c589d",
+      "comment": "",
+      "command": "click",
+      "target": "id=author",
+      "targets": [
+        ["id=author", "id"],
+        ["name=book_author", "name"],
+        ["css=#author", "css:finder"],
+        ["xpath=//input[@id='author']", "xpath:attributes"],
+        ["xpath=//div[2]/div[2]/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "32fbaca9-2734-443a-a68d-4478f0f50091",
+      "comment": "",
+      "command": "type",
+      "target": "id=author",
+      "targets": [
+        ["id=author", "id"],
+        ["name=book_author", "name"],
+        ["css=#author", "css:finder"],
+        ["xpath=//input[@id='author']", "xpath:attributes"],
+        ["xpath=//div[2]/div[2]/input", "xpath:position"]
+      ],
+      "value": "A Name"
+    }, {
+      "id": "c1451462-7de7-4c95-82b8-3737d6fa8e84",
+      "comment": "",
+      "command": "click",
+      "target": "id=type",
+      "targets": [
+        ["id=type", "id"],
+        ["name=book_generation", "name"],
+        ["css=#type", "css:finder"],
+        ["xpath=//select[@id='type']", "xpath:attributes"],
+        ["xpath=//select", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "042661f4-a174-48dc-bdcc-bae2ed781592",
+      "comment": "",
+      "command": "select",
+      "target": "id=type",
+      "targets": [],
+      "value": "label=Copy of copy"
+    }, {
+      "id": "39827a81-07a1-4584-893b-215436ee3ec7",
+      "comment": "",
+      "command": "click",
+      "target": "name=submit",
+      "targets": [
+        ["name=submit", "name"],
+        ["css=input:nth-child(4)", "css:finder"],
+        ["xpath=//input[@name='submit']", "xpath:attributes"],
+        ["xpath=//form/div/div[2]/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "08b3bab1-a39f-4592-837e-017ed2e00af4",
+      "comment": "",
+      "command": "assertText",
+      "target": "id=minecraft-command",
+      "targets": [
+        ["id=minecraft-command", "id"],
+        ["css=#minecraft-command", "css:finder"],
+        ["xpath=//code[@id='minecraft-command']", "xpath:attributes"],
+        ["xpath=//code", "xpath:position"]
+      ],
+      "value": "/give @p written_book{pages:['{\"text\":\"///\"This is a sentence.///\" said the Author. ///n\"}'],title:\"Book Title\",author:\"A Name\",generation:2}"
+    }]
+  }, {
+    "id": "26ea05ef-ddc1-4abc-8455-ef9b4f756600",
+    "name": "Punctuation usage produces no errors",
+    "commands": [{
+      "id": "d86d3f8e-a48c-4691-88e9-c071d6c16d36",
+      "comment": "",
+      "command": "open",
+      "target": "http://192.168.1.26/minecraft-book-util/",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "60abb98f-2049-48f8-b2b3-2f04dff54255",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "1440x797",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "94251814-8308-411b-b85c-6221fd39178b",
+      "comment": "",
+      "command": "click",
+      "target": "id=book_text",
+      "targets": [
+        ["id=book_text", "id"],
+        ["name=book_text", "name"],
+        ["css=#book_text", "css:finder"],
+        ["xpath=//textarea[@id='book_text']", "xpath:attributes"],
+        ["xpath=//textarea", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "f836fa61-83a6-4ae4-80aa-966d94d20eb1",
+      "comment": "",
+      "command": "type",
+      "target": "id=book_text",
+      "targets": [
+        ["id=book_text", "id"],
+        ["name=book_text", "name"],
+        ["css=#book_text", "css:finder"],
+        ["xpath=//textarea[@id='book_text']", "xpath:attributes"],
+        ["xpath=//textarea", "xpath:position"]
+      ],
+      "value": "?,.!@#$%^&*()-_=+<>;:'\"[]{}/\\"
+    }, {
+      "id": "2e549de2-b0f2-48cd-9a00-83dce52ff80e",
+      "comment": "",
+      "command": "click",
+      "target": "id=test_mode",
+      "targets": [
+        ["id=test_mode", "id"],
+        ["name=test_mode", "name"],
+        ["css=#test_mode", "css:finder"],
+        ["xpath=//input[@id='test_mode']", "xpath:attributes"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "85c500b8-99c3-44ba-a993-37a614cff757",
+      "comment": "",
+      "command": "click",
+      "target": "id=title",
+      "targets": [
+        ["id=title", "id"],
+        ["name=book_title", "name"],
+        ["css=#title", "css:finder"],
+        ["xpath=//input[@id='title']", "xpath:attributes"],
+        ["xpath=//div[2]/div/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "cf8d8aff-0f54-4e54-a6a0-775fa4e987bf",
+      "comment": "",
+      "command": "type",
+      "target": "id=title",
+      "targets": [
+        ["id=title", "id"],
+        ["name=book_title", "name"],
+        ["css=#title", "css:finder"],
+        ["xpath=//input[@id='title']", "xpath:attributes"],
+        ["xpath=//div[2]/div/input", "xpath:position"]
+      ],
+      "value": "Punctuation"
+    }, {
+      "id": "08403708-acc0-4d45-aaa8-5d998f568d54",
+      "comment": "",
+      "command": "click",
+      "target": "id=author",
+      "targets": [
+        ["id=author", "id"],
+        ["name=book_author", "name"],
+        ["css=#author", "css:finder"],
+        ["xpath=//input[@id='author']", "xpath:attributes"],
+        ["xpath=//div[2]/div[2]/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "f4627c38-9f06-4738-94c8-6726139db438",
+      "comment": "",
+      "command": "type",
+      "target": "id=author",
+      "targets": [
+        ["id=author", "id"],
+        ["name=book_author", "name"],
+        ["css=#author", "css:finder"],
+        ["xpath=//input[@id='author']", "xpath:attributes"],
+        ["xpath=//div[2]/div[2]/input", "xpath:position"]
+      ],
+      "value": "A Name"
+    }, {
+      "id": "e3c2d90e-9f59-4786-b694-9afec1c85b16",
+      "comment": "",
+      "command": "click",
+      "target": "name=submit",
+      "targets": [
+        ["name=submit", "name"],
+        ["css=input:nth-child(4)", "css:finder"],
+        ["xpath=//input[@name='submit']", "xpath:attributes"],
+        ["xpath=//form/div/div[2]/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "7618ebea-3418-45a6-b37c-4185f4f8c10c",
+      "comment": "",
+      "command": "assertText",
+      "target": "id=minecraft-command",
+      "targets": [
+        ["id=minecraft-command", "id"],
+        ["css=#minecraft-command", "css:finder"],
+        ["xpath=//code[@id='minecraft-command']", "xpath:attributes"],
+        ["xpath=//code", "xpath:position"]
+      ],
+      "value": "/give @p written_book{pages:['{\"text\":\"?,.!@#$%^&*()-_=+<>;:\\'///\"[]{}/\\ ///n\"}'],title:\"Punctuation\",author:\"A Name\",generation:0}"
+    }]
+  }, {
+    "id": "9d242d43-1c68-45bb-b7d8-769cebc559af",
+    "name": "Using multiple paragraphs",
+    "commands": [{
+      "id": "c6405b5d-fba0-4f0f-af95-eb45ed2e1bc6",
+      "comment": "",
+      "command": "open",
+      "target": "http://192.168.1.26/minecraft-book-util/",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "ac4a2a8f-4ea0-4b9b-affb-539e1b3c15ec",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "1440x797",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "830c7d8c-7ac6-4e10-b3b8-585cb3587e91",
+      "comment": "",
+      "command": "click",
+      "target": "id=book_text",
+      "targets": [
+        ["id=book_text", "id"],
+        ["name=book_text", "name"],
+        ["css=#book_text", "css:finder"],
+        ["xpath=//textarea[@id='book_text']", "xpath:attributes"],
+        ["xpath=//textarea", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "f48f5d69-a012-4583-920a-89d6f8c62c79",
+      "comment": "",
+      "command": "type",
+      "target": "id=book_text",
+      "targets": [
+        ["id=book_text", "id"],
+        ["name=book_text", "name"],
+        ["css=#book_text", "css:finder"],
+        ["xpath=//textarea[@id='book_text']", "xpath:attributes"],
+        ["xpath=//textarea", "xpath:position"]
+      ],
+      "value": "Let's create multiple paragraphs.\\n\\nNew one! How long should it be?\\nThat long.\\n\\n\\n\\nMany empty lines!"
+    }, {
+      "id": "54cbf71d-fbc4-4291-b584-d977726f00a8",
+      "comment": "",
+      "command": "click",
+      "target": "id=test_mode",
+      "targets": [
+        ["id=test_mode", "id"],
+        ["name=test_mode", "name"],
+        ["css=#test_mode", "css:finder"],
+        ["xpath=//input[@id='test_mode']", "xpath:attributes"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "b42e0263-3d7d-49f0-9767-9dc247834ee3",
+      "comment": "",
+      "command": "click",
+      "target": "id=title",
+      "targets": [
+        ["id=title", "id"],
+        ["name=book_title", "name"],
+        ["css=#title", "css:finder"],
+        ["xpath=//input[@id='title']", "xpath:attributes"],
+        ["xpath=//div[2]/div/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "fa492a1b-58dd-4403-b26c-08a83f33ce36",
+      "comment": "",
+      "command": "type",
+      "target": "id=title",
+      "targets": [
+        ["id=title", "id"],
+        ["name=book_title", "name"],
+        ["css=#title", "css:finder"],
+        ["xpath=//input[@id='title']", "xpath:attributes"],
+        ["xpath=//div[2]/div/input", "xpath:position"]
+      ],
+      "value": "Paragraphs"
+    }, {
+      "id": "d7f9bb7d-e4c9-44a8-982c-941ce2569a58",
+      "comment": "",
+      "command": "click",
+      "target": "id=author",
+      "targets": [
+        ["id=author", "id"],
+        ["name=book_author", "name"],
+        ["css=#author", "css:finder"],
+        ["xpath=//input[@id='author']", "xpath:attributes"],
+        ["xpath=//div[2]/div[2]/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "d874f590-708d-4217-8ec4-7f7e300f40bd",
+      "comment": "",
+      "command": "type",
+      "target": "id=author",
+      "targets": [
+        ["id=author", "id"],
+        ["name=book_author", "name"],
+        ["css=#author", "css:finder"],
+        ["xpath=//input[@id='author']", "xpath:attributes"],
+        ["xpath=//div[2]/div[2]/input", "xpath:position"]
+      ],
+      "value": "A Name"
+    }, {
+      "id": "43e4aa1d-086e-4582-8740-b01347063a8d",
+      "comment": "",
+      "command": "click",
+      "target": "id=type",
+      "targets": [
+        ["id=type", "id"],
+        ["name=book_generation", "name"],
+        ["css=#type", "css:finder"],
+        ["xpath=//select[@id='type']", "xpath:attributes"],
+        ["xpath=//select", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "1576e707-650e-4171-9960-d363c77ff863",
+      "comment": "",
+      "command": "select",
+      "target": "id=type",
+      "targets": [],
+      "value": "label=Copy of original"
+    }, {
+      "id": "6940d98c-910a-4e62-bb14-12a4fb2dbb3a",
+      "comment": "",
+      "command": "click",
+      "target": "name=submit",
+      "targets": [
+        ["name=submit", "name"],
+        ["css=input:nth-child(4)", "css:finder"],
+        ["xpath=//input[@name='submit']", "xpath:attributes"],
+        ["xpath=//form/div/div[2]/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "58e6696a-d399-478f-b27e-4f980d28a572",
+      "comment": "",
+      "command": "assertText",
+      "target": "id=minecraft-command",
+      "targets": [
+        ["id=minecraft-command", "id"],
+        ["css=#minecraft-command", "css:finder"],
+        ["xpath=//code[@id='minecraft-command']", "xpath:attributes"],
+        ["xpath=//code", "xpath:position"]
+      ],
+      "value": "/give @p written_book{pages:['{\"text\":\"Let\\'s create multiple paragraphs. ///n ///nNew one! How long should it be? ///nThat long. ///n ///n ///n ///nMany empty lines! ///n\"}'],title:\"Paragraphs\",author:\"A Name\",generation:1}"
+    }]
   }],
   "suites": [{
     "id": "46792b16-06bb-42a3-8813-53ef8013e4d0",
@@ -175,6 +1405,6 @@
     "timeout": 300,
     "tests": ["42d1d411-2745-41ef-a005-1a2a54d5ccae"]
   }],
-  "urls": ["http://192.168.1.26/"],
+  "urls": ["http://192.168.1.26/", "http://192.168.1.26/minecraft-book-util/"],
   "plugins": []
 }

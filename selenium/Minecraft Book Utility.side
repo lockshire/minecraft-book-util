@@ -164,7 +164,7 @@
         ["xpath=//code[@id='minecraft-command']", "xpath:attributes"],
         ["xpath=//code", "xpath:position"]
       ],
-      "value": "/give @p written_book{pages:['{\"text\":\"Test ///n\"}'],title:\"Book Title\",author:\"A Name\",generation:3}"
+      "value": "/give @p written_book{pages:['{\"text\":\"Test///n\"}'],title:\"Book Title\",author:\"A Name\",generation:3}"
     }]
   }, {
     "id": "3b87aab5-1fff-46fa-9e3d-886adf9e4744",
@@ -295,7 +295,7 @@
         ["xpath=//code[@id='minecraft-command']", "xpath:attributes"],
         ["xpath=//code", "xpath:position"]
       ],
-      "value": "/give @p written_book{pages:['{\"text\":\" ///n\"}'],title:\"Book Title\",author:\"A Name\",generation:1}"
+      "value": "/give @p written_book{pages:['{\"text\":\"///n\"}'],title:\"Book Title\",author:\"A Name\",generation:1}"
     }]
   }, {
     "id": "a1e5cfb0-007e-4a47-8f75-5df965ed2cb9",
@@ -350,7 +350,7 @@
         ["xpath=//code[@id='minecraft-command']", "xpath:attributes"],
         ["xpath=//code", "xpath:position"]
       ],
-      "value": "/give @p written_book{pages:['{\"text\":\" ///n\"}'],title:\"\",author:\"\",generation:0}"
+      "value": "/give @p written_book{pages:['{\"text\":\"///n\"}'],title:\"\",author:\"\",generation:0}"
     }]
   }, {
     "id": "43afb0e0-8bd9-4867-b1ac-70dbc99d76d4",
@@ -503,7 +503,7 @@
         ["xpath=//code[@id='minecraft-command']", "xpath:attributes"],
         ["xpath=//code", "xpath:position"]
       ],
-      "value": "/give @p written_book{pages:['{\"text\":\"This is a single line. ///n\"}'],title:\"Book Title\",author:\"A Name\",generation:3}"
+      "value": "/give @p written_book{pages:['{\"text\":\"This is a single line.///n\"}'],title:\"Book Title\",author:\"A Name\",generation:3}"
     }]
   }, {
     "id": "70d4c7a2-1177-4e33-b77d-4d2c4d9c3a0d",
@@ -656,7 +656,7 @@
         ["xpath=//code[@id='minecraft-command']", "xpath:attributes"],
         ["xpath=//code", "xpath:position"]
       ],
-      "value": "/give @p written_book{pages:['{\"text\":\"Time to test out up to 14 lines of text. This should only produce one page of text. It\\'s also hard to know if 14 lines here will be 14 lines in command code. Technically I should do another test for exactly 14 lines and another for between one and 14 lines. One more sentence to go! ///n\"}','{\"text\":\"\"}'],title:\"One Page\",author:\"A Name\",generation:3}"
+      "value": "/give @p written_book{pages:['{\"text\":\"Time to test out up to 14 lines of text. This should only produce one page of text. It\\'s also hard to know if 14 lines here will be 14 lines in command code. Technically I should do another test for exactly 14 lines and another for between one and 14 lines. One more sentence to go!///n\"}','{\"text\":\"\"}'],title:\"One Page\",author:\"A Name\",generation:3}"
     }]
   }, {
     "id": "68f83e08-f2a3-4a60-966c-b6f4867ead0b",
@@ -809,7 +809,7 @@
         ["xpath=//code[@id='minecraft-command']", "xpath:attributes"],
         ["xpath=//code", "xpath:position"]
       ],
-      "value": "/give @p written_book{pages:['{\"text\":\"Time to test for two pages. We need to write out text that will fill between 15 and 28 lines. We shall see if 15 lines in this box matches two pages in command code. I don\\'t know what else to write. ///n ///nWe will also test a new paragraph. Should I do two tests in one? \"}','{\"text\":\"Probably not. ///n\"}'],title:\"Two Pages\",author:\"A Name\",generation:2}"
+      "value": "/give @p written_book{pages:['{\"text\":\"Time to test for two pages. We need to write out text that will fill between 15 and 28 lines. We shall see if 15 lines in this box matches two pages in command code. I don\\'t know what else to write.///n///nWe will also test a new paragraph. Should I do two tests in one? \"}','{\"text\":\"Probably not.///n\"}'],title:\"Two Pages\",author:\"A Name\",generation:2}"
     }]
   }, {
     "id": "a834f871-98aa-4b8e-808c-b03a0d81b612",
@@ -955,7 +955,7 @@
         ["xpath=//code[@id='minecraft-command']", "xpath:attributes"],
         ["xpath=//code", "xpath:position"]
       ],
-      "value": "/give @p written_book{pages:['{\"text\":\"I\\'m using conjunctions to test single quotations. Don\\'t know if it\\'ll work. Let\\'s see. ///n\"}'],title:\"Book Title\",author:\"A Name\",generation:0}"
+      "value": "/give @p written_book{pages:['{\"text\":\"I\\'m using conjunctions to test single quotations. Don\\'t know if it\\'ll work. Let\\'s see.///n\"}'],title:\"Book Title\",author:\"A Name\",generation:0}"
     }]
   }, {
     "id": "58dee133-db25-4b08-b5b1-8fe05cd20091",
@@ -1038,7 +1038,7 @@
         ["xpath=//input[@id='title']", "xpath:attributes"],
         ["xpath=//div[2]/div/input", "xpath:position"]
       ],
-      "value": "Book Title"
+      "value": "Double Quotation"
     }, {
       "id": "5f2175e8-f029-409e-bb99-5c2c703c589d",
       "comment": "",
@@ -1108,7 +1108,7 @@
         ["xpath=//code[@id='minecraft-command']", "xpath:attributes"],
         ["xpath=//code", "xpath:position"]
       ],
-      "value": "/give @p written_book{pages:['{\"text\":\"///\"This is a sentence.///\" said the Author. ///n\"}'],title:\"Book Title\",author:\"A Name\",generation:2}"
+      "value": "/give @p written_book{pages:['{\"text\":\"///\"This is a sentence.///\" said the Author.///n\"}'],title:\"Double Quotation\",author:\"A Name\",generation:2}"
     }]
   }, {
     "id": "26ea05ef-ddc1-4abc-8455-ef9b4f756600",
@@ -1241,7 +1241,7 @@
         ["xpath=//code[@id='minecraft-command']", "xpath:attributes"],
         ["xpath=//code", "xpath:position"]
       ],
-      "value": "/give @p written_book{pages:['{\"text\":\"?,.!@#$%^&*()-_=+<>;:\\'///\"[]{}/\\ ///n\"}'],title:\"Punctuation\",author:\"A Name\",generation:0}"
+      "value": "/give @p written_book{pages:['{\"text\":\"?,.!@#$%^&*()-_=+<>;:\\'///\"[]{}/\\///n\"}'],title:\"Punctuation\",author:\"A Name\",generation:0}"
     }]
   }, {
     "id": "9d242d43-1c68-45bb-b7d8-769cebc559af",
@@ -1394,7 +1394,7 @@
         ["xpath=//code[@id='minecraft-command']", "xpath:attributes"],
         ["xpath=//code", "xpath:position"]
       ],
-      "value": "/give @p written_book{pages:['{\"text\":\"Let\\'s create multiple paragraphs. ///n ///nNew one! How long should it be? ///nThat long. ///n ///n ///n ///nMany empty lines! ///n\"}'],title:\"Paragraphs\",author:\"A Name\",generation:1}"
+      "value": "/give @p written_book{pages:['{\"text\":\"Let\\'s create multiple paragraphs.///n///nNew one! How long should it be?///nThat long.///n///n///n///nMany empty lines!///n\"}'],title:\"Paragraphs\",author:\"A Name\",generation:1}"
     }]
   }, {
     "id": "04226e1e-0913-484b-951b-ddf912cf4653",

@@ -120,6 +120,14 @@ class Book
         // Replace any dangling CRs with a newline
         $text = str_replace("\r", "\n", $text);
 
+        // Replace fancy single quotes
+        $text = str_replace("‘", "'", $text);
+        $text = str_replace("’", "'", $text);
+
+        // Replace fancy double quotes
+        $text = str_replace("“", "\"", $text);
+        $text = str_replace("”", "\"", $text);
+
         // Split file into lines
         $lines = explode("\n", $text);
 
